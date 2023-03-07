@@ -166,8 +166,6 @@ Clone this repository to your desired folder:
   cd my-folder
   git clone git@github.com:belaymit/oop_school_library.git
 ```
-
-
 ### Install
 
 Install this project with:
