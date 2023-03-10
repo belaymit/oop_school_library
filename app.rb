@@ -14,12 +14,11 @@ class App
   end
 
   def run
-    puts("display books")
+    puts('display books')
   end
 
   def loads_books
     # code to list all books
-    
   end
 
   def load_people
