@@ -1,8 +1,8 @@
-require_relative './classes/classroom'
-require_relative './classes/student'
-require_relative './classes/teacher'
-require_relative './classes/book'
-require_relative './classes/rental'
+require_relative './src/classes/classrom'
+require_relative './src/classes/student'
+require_relative './src/classes/teacher'
+require_relative './src/classes/book'
+require_relative './src/classes/rental'
 
 class App
   attr_reader :books, :people, :rentals
@@ -13,8 +13,13 @@ class App
     @rentals = []
   end
 
+  def run
+    puts("display books")
+  end
+
   def loads_books
     # code to list all books
+    
   end
 
   def load_people
