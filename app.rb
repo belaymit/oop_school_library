@@ -56,7 +56,6 @@ class App
       parent_permission = true
     when :n
       parent_permission = false
-    else
       puts 'Invalid option'
     end
     student = Student.new(name, age, parent_permission)
