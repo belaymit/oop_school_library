@@ -46,9 +46,12 @@
 - Create a rental.
 - List all rentals for a given person id.
 
+
 ## Learning Objectives
 > - Implement classes and objects in Ruby.
 > - Implement encapsulation and inheritance with Ruby.
+> - Run a program using the command line.
+> - Build interactive console apps.
 > - Run a program using the command line.
 
 ## 🛠 Built With <a name="built-with"></a>
