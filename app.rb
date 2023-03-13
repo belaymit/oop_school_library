@@ -4,6 +4,8 @@ require_relative './src/classes/teacher'
 require_relative './src/classes/book'
 require_relative './src/classes/rental'
 require_relative './src/modules/user_choice'
+require_relative './src/modules/list'
+require_relative './src/modules/create_people'
 
 class App
   attr_reader :books, :people, :rentals
@@ -15,32 +17,12 @@ class App
   end
 
   def run
-    user_choice.main
+    prompt_user
   end
 
+  include List
 
-  def create_student(age, name)
-    print 'Has parent permission? [Y/N]: '
-    permission = gets.chomp.downcase
-    case permission
-    when :y
-      parent_permission = true
-    when :n
-      parent_permission = false
-      puts 'Invalid option'
-    end
-    student = Student.new(name, age, parent_permission)
-    @people.push(student)
-    puts 'Student has been created successfully!'
-  end
-
-  def create_teacher(age, name)
-    print 'Specialization: '
-    specialization = gets.chomp
-    teacher = Teacher.new(name, age, specialization)
-    @people.push(teacher)
-    puts 'Teacher hase been created successfully!'
-  end
+  include CreatePeople
 
   def create_book
     print 'Title: '
