@@ -1,7 +1,4 @@
 require_relative '../../app'
-# require_relative './list'
-
-# include List
 
 def menu
   puts "\n Welcome to School Library App! \n\n"
@@ -41,4 +38,5 @@ def prompt_user
   menu
   choice = gets.chomp.to_i
   choice == 7 ? quit_app : option_case(choice)
+  prompt_user
 end

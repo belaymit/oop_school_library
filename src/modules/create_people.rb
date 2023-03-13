@@ -30,7 +30,10 @@ module CreatePeople
       parent_permission = false
       puts 'Invalid option'
     end
-    student = Student.new(name, age, parent_permission)
+    print 'Classroom: (C1,C2): '
+    classroom = gets.chomp
+
+    student = Student.new(name, age, classroom, parent_permission: true)
     @people.push(student)
     puts 'Student has been created successfully!'
   end
