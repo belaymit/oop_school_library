@@ -33,7 +33,7 @@ module CreatePeople
     print 'Classroom: (C1,C2): '
     classroom = gets.chomp
 
-    student = Student.new(name, age, classroom, parent_permission: true)
+    student = Student.new(name, age, classroom, parent_permission: parent_permission)
     @people.push(student)
     puts 'Student has been created successfully!'
   end
