@@ -37,6 +37,10 @@ class App
   end
 
   def get_rentals
+    return [] unless File.exist?('rental.json')
+    rental_items = File.read('rental.json')
+    rental_list = JSON.parse(rental_items)
+    rental_list.each { Rental.new('date', 'person', 'book') }
   end
 
   def initialize

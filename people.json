@@ -74,5 +74,27 @@
     "parent_permission": true,
     "classroom": "C1",
     "id": 50
+  },
+  {
+    "type": null,
+    "name": "Someone",
+    "specialization": "maths",
+    "age": 44,
+    "id": 965
+  },
+  {
+    "type": "Teacher",
+    "name": "Others",
+    "specialization": "Maths",
+    "age": 55,
+    "id": 260
+  },
+  {
+    "type": "Student",
+    "name": "belay",
+    "age": 23,
+    "parent_permission": true,
+    "classroom": "C1",
+    "id": 106
   }
 ]
