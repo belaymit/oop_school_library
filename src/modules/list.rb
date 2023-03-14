@@ -2,11 +2,11 @@ module List
   def load_books
     # puts "\nNo books in the Library\n\n" unless @books.length.positive?
     # @books.each { |book| puts("Title: #{book.title}, Author: #{book.author}\n") }
-    if @books.empty?
+    if app.books.empty?
       puts 'No Book is Found, chose 4 to create book'
     else
-      puts @books.count <= 1 ? "\n#{@books.count} Book\n" : "\n#{@books.count} Books \n"
-      @books.each_with_index do |book, index|
+      puts books.count <= 1 ? "\n#{books.count} Book\n" : "\n#{books.count} Books \n"
+      books.each_with_index do |book, index|
         puts "#{index + 1} Title: '#{book.title}', Author: #{book.author}"
       end
     end
