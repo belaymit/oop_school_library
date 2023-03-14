@@ -4,6 +4,7 @@
     "name": "Maxmilon",
     "age": 25,
     "parent_permission": false,
+    "classroom": "A1",
     "id": 11
   },
   {
@@ -18,6 +19,7 @@
     "name": "Davos",
     "age": 21,
     "parent_permission": false,
+    "classroom": "A1",
     "id": 31
   },
   {
@@ -32,6 +34,7 @@
     "name": "Mata",
     "age": 22,
     "parent_permission": false,
+    "classroom": "A1",
     "id": 18
   },
   {
@@ -39,6 +42,7 @@
     "name": "Tina",
     "age": 19,
     "parent_permission": false,
+    "classroom": "A1",
     "id": 12
   },
   {
@@ -46,6 +50,7 @@
     "name": "Daenerys",
     "age": 26,
     "parent_permission": false,
+    "classroom": "A1",
     "id": 36
   },
   {
@@ -61,5 +66,13 @@
     "specialization": "Programming",
     "age": 21,
     "id": 64
+  },
+  {
+    "type": null,
+    "name": "Juan",
+    "age": 98,
+    "parent_permission": true,
+    "classroom": "C1",
+    "id": 50
   }
 ]

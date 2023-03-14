@@ -2,11 +2,11 @@ require 'json'
 
 module CreateBook
   def persit_books(title, author)
-    book_item = {'title'=>title, 'author'=>author}
+    book_item = { 'title' => title, 'author' => author }
     # file = File.open('books.json')
     book = File.read('books.json')
     @books = JSON.parse(book)
-    @books << book_item 
+    @books << book_item
     File.write('books.json', JSON.pretty_generate(@books))
   end
 

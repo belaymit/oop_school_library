@@ -5,7 +5,7 @@ module List
     else
       puts @books.count <= 1 ? "\n#{@books.count} Book\n" : "\n#{@books.count} Books \n"
       @books.each_with_index do |book, index|
-        puts "#{index + 1} Title: '#{book.title}', Author: #{book.author}"
+        puts "#{index + 1} Title: '#{book['title']}', Author: #{book['author']}"
       end
     end
   end
@@ -16,7 +16,7 @@ module List
     else
       puts @people.count <= 1 ? "\n#{@people.count} Person\n" : "\n#{@people.count} Persons \n"
       @people.each_with_index do |person, index|
-        puts "#{index + 1}  Name: #{person.name}, ID: #{person.id} Age: #{person.age}"
+        puts "#{index + 1}  Name: #{person['name']}, ID: #{person['id']} Age: #{person['age']}"
       end
     end
   end

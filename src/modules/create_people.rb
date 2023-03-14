@@ -1,5 +1,13 @@
 require_relative './permission'
 module CreatePeople
+  def persit_student(type, name, age, parent_permission, classroom, id)
+    student_item = { 'type' => type, 'name' => name, 'age' => age, 'parent_permission' => parent_permission, 'classroom' => classroom, 'id' => id }
+    people = File.read('people.json')
+    @people = JSON.parse(people)
+    @people << student_item
+    File.write('people.json', JSON.pretty_generate(@people))
+  end
+
   def create_person
     puts 'Create a person'
     print 'Do you want to create a Student (1) or a Teacher (2)?[Input a Number]: '
@@ -29,8 +37,8 @@ module CreatePeople
 
     student = Student.new(name, age, classroom, parent_permission: has_permission)
     puts @people
-    @people.push(student)
-    # @people << student unless @people.include?(student)
+    @people << student unless @people.include?(student)
+    persit_student(student.type, name, age, has_permission, classroom, student.id)
     puts 'Student has been created successfully!'
   end
 

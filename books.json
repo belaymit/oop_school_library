@@ -38,5 +38,9 @@
   {
     "title": "book",
     "author": "author"
+  },
+  {
+    "title": "My book is fan tastic",
+    "author": "Me"
   }
 ]
