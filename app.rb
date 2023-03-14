@@ -3,7 +3,7 @@ require_relative './src/classes/student'
 require_relative './src/classes/teacher'
 require_relative './src/classes/book'
 require_relative './src/classes/rental'
-# require_relative './src/modules/user_choice'
+
 require_relative './src/modules/list'
 require_relative './src/modules/create_people'
 require_relative './src/modules/create_book'
@@ -16,10 +16,6 @@ class App
     @people = []
     @books = []
     @rentals = []
-  end
-
-  def run
-    prompt_user
   end
 
   include List
