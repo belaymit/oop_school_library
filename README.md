@@ -197,6 +197,12 @@ To run the project, execute the following command:
 - Twitter: [@twitterhandle](https://twitter.com/2belamit)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/belay-birhanu-144ba714b/)
 
+👤 **Juan Carlos Sanchez**
+
+- GitHub: [@Juank628](https://github.com/Juank628)
+- Twitter: [@juancadev81](https://twitter.com/juancadev81)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/juan-carlos-sanchez-zunino)
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

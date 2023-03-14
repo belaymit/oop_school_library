@@ -1,25 +1,24 @@
 require_relative './app'
 
 def menu
-  puts('-------------------------------------')
-  puts('Please enter your choice: ')
-  print('-------------------------------------')
-  print('
-    1 - List all books
-    2 - List all people
-    3 - Create a person
-    4 - Create a book
-    5 - Create a rental
-    6 - List all rentals for a given person id
-    7 - Exit
-    ')
+  puts "\n Welcome to School Library App! \n\n"
+  puts "Please chose an option by entering a number: \n\n"
+  options = {
+    1 => 'list_of_books',
+    2 => 'list_of_people',
+    3 => 'create_a_person',
+    4 => 'create_book',
+    5 => 'create_rental',
+    6 => 'list_all_rentals_for_person',
+    7 => 'Exit'
+  }
+  puts options.map { |key, value| "#{key}. #{value}" }.join("\n")
 end
 
-# rubocop:disable Style/CyclomaticComplexity
-def run_app(app, method)
-  case method
+def option_case(app, choice)
+  case choice
   when 1
-    app.loads_books
+    app.load_books
   when 2
     app.load_people
   when 3
@@ -30,33 +29,19 @@ def run_app(app, method)
     app.create_rental
   when 6
     app.load_rentals
-  when 7
-    puts 'Thank you for using my app'
-    abort
   else
-    puts 'Please enter a valid option'
+    puts '*** Incorect choice, chose a number between 1-7 ***'
   end
 end
 
-# rubocop:enable Style/CyclomaticComplexity
 def main
   app = App.new
-  # options = {
-  #   1 => 'list_of_books',
-  #   2 => 'list_of_people',
-  #   3 => 'create_a_person',
-  #   4 => 'create_book',
-  #   5 => 'create_rental',
-  #   6 => 'list_all_rentals_for_person',
-  #   7 => 'exit'
-  # }
   choice = -1
-  until choice == 7
+  until choice == 7 || choice.zero?
     menu
     choice = gets.chomp.to_i
-    run_app(app, choice)
+    option_case(app, choice) unless choice == 7
   end
+  puts 'Thank you for using this app'
 end
-
-puts 'Welcome to School Library App!'
 main
