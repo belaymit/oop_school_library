@@ -9,7 +9,7 @@ def menu
     3 => 'create_a_person',
     4 => 'create_book',
     5 => 'create_rental',
-    6 => 'list_all_rentals_for_person',
+    6 => 'list_all_rentals',
     7 => 'Exit'
   }
   puts options.map { |key, value| "#{key}. #{value}" }.join("\n")
@@ -30,7 +30,7 @@ def option_case(choice)
   when 6
     load_rentals
   else
-    puts '*** Incorect choice, chose a number between 1-7 ***'
+    puts '*** Invalid choice, Input a number between 1-7 ***'
   end
 end
 

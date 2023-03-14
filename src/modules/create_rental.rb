@@ -1,23 +1,19 @@
 module CreateRental
   def create_rental
-    puts 'Select a book by number'
-    @books.each_with_index { |book, i| puts(" #{i}) | Title: #{book.title} Author: #{book.author} |") }
-    index = gets.chomp.to_i
-    book = @books[index]
+  print "Select a book by number from the following list:\n"
+  load_books
+  prompt_user if @books.empty?
+  book_index = gets.chomp.to_i - 1
 
-    puts 'Select a person by number (not ID)'
-    @people.each_with_index do |person, i|
-      puts("  #{i}) [#{person.class}] ID: #{person.id} Name: #{person.name} Age: #{person.age}")
-    end
-    index = gets.chomp.to_i
-    person = @people[index]
+  print "Select a person from the following list by number:\n"
+  load_people
+  prompt_user if @people.empty?
+  person_index = gets.chomp.to_i - 1
 
-    date = Time.now.strftime('%m/%d/%y')
-    rental = Rental.new(date, book, person)
-    @rentals.push(rental)
-    person.add_rental(rental)
-    book.add_rental(rental)
-    puts "Date:  #{date}"
-    puts('Book has been rented successfully')
-  end
+  date = Time.now.strftime('%m/%d/%y')
+  puts "Date:  #{date}"
+  rental = Rental.new(date, @people[person_index], @books[book_index])
+  @rentals << rental unless @rentals.include?(rental)
+  puts('Rental has been created successfully')
+end
 end
