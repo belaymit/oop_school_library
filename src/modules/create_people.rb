@@ -1,6 +1,5 @@
 require_relative './permission'
 module CreatePeople
-
   def create_person
     puts 'Create a person'
     print 'Do you want to create a Student (1) or a Teacher (2)?[Input a Number]: '
@@ -19,12 +18,12 @@ module CreatePeople
   def create_student
     print 'Name: '
     name = gets.chomp
-    
+
     print 'Age: '
     age = gets.chomp.to_i
 
     has_permission = permission?
-    
+
     print 'Classroom: (C1,C2): '
     classroom = gets.chomp
 
@@ -38,7 +37,7 @@ module CreatePeople
   def create_teacher
     print 'Name: '
     name = gets.chomp
-    
+
     print 'Age: '
     age = gets.chomp.to_i
 

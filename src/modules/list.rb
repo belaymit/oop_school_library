@@ -22,7 +22,7 @@ module List
   end
 
   def load_rentals
-  puts "\n #{@rentals.count} Rentals\n" unless @rentals.length.positive?
-  rentals.each { |rent| puts("Date: #{rent.date} | #{rent.person.name} rented a #{rent.book.title}") }
-end
+    puts "\n #{@rentals.count} Rentals\n" unless @rentals.length.positive?
+    rentals.each { |rent| puts("Date: #{rent.date} | #{rent.person.name} rented a #{rent.book.title}") }
+  end
 end
