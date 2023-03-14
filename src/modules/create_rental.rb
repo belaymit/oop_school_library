@@ -2,7 +2,7 @@ require 'json'
 
 module CreateRental
   def persist_rental(date, author, title, name, id)
-    rent_items = {'date'=>date, 'author'=>author, 'title'=>title, 'name'=>name, 'id'=>id}
+    rent_items = { 'date' => date, 'author' => author, 'title' => title, 'name' => name, 'id' => id }
     rental_list = File.read('rental.json')
     @rentals = JSON.parse(rental_list)
     @rentals << rent_items

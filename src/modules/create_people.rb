@@ -1,7 +1,10 @@
 require_relative './permission'
 module CreatePeople
-  def persit_student(type, name, age, parent_permission, classroom, id)
-    student_item = { 'type' => type, 'name' => name, 'age' => age, 'parent_permission' => parent_permission, 'classroom' => classroom, 'id' => id }
+  def persit_student(data)
+    student_item = { 'type' => data['type'], 'name' => data['name'], 'age' => data['age'],
+                     'parent_permission' => data['parent_permission'],
+                     'classroom' => data['classroom'], 'id' => data['id'] }
+
     people = File.read('people.json')
     @people = JSON.parse(people)
     @people << student_item
@@ -9,12 +12,12 @@ module CreatePeople
   end
 
   def persist_teachers(type, name, specialization, age, id)
-    teacher_data = { 'type' => type, 'name' => name, 'specialization'=> specialization, 'age' => age, 'id' => id }
+    teacher_data = { 'type' => type, 'name' => name, 'specialization' => specialization, 'age' => age, 'id' => id }
     teacher = File.read('people.json')
     @people = JSON.parse(teacher)
     @people << teacher_data
     File.write('people.json', JSON.pretty_generate(@people))
-  end 
+  end
 
   def create_person
     puts 'Create a person'
@@ -46,7 +49,10 @@ module CreatePeople
     student = Student.new(name, age, classroom, parent_permission: has_permission)
     puts @people
     @people << student unless @people.include?(student)
-    persit_student(student.class.name, name, age, has_permission, classroom, student.id)
+    data = { 'type' => student.class.name, 'name' => name, 'age' => age,
+             'parent_permission' => has_permission, 'classroom' => classroom,
+             'id' => student.id }
+    persit_student(data)
     puts 'Student has been created successfully!'
   end
 

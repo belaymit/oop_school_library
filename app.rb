@@ -13,7 +13,7 @@ require 'json'
 class App
   attr_reader :books, :people, :rentals
 
-  def get_books
+  def read_books
     return [] unless File.exist?('books.json')
 
     book_items = File.read('books.json')
@@ -21,7 +21,7 @@ class App
     book_list.each { Book.new('title', 'author') }
   end
 
-  def get_people
+  def read_people
     return [] unless File.exist?('people.json')
 
     people_items = File.read('people.json')
@@ -36,17 +36,18 @@ class App
     end
   end
 
-  def get_rentals
+  def read_rentals
     return [] unless File.exist?('rental.json')
+
     rental_items = File.read('rental.json')
     rental_list = JSON.parse(rental_items)
     rental_list.each { Rental.new('date', 'person', 'book') }
   end
 
   def initialize
-    @people = get_people
-    @books = get_books
-    @rentals = get_rentals
+    @people = read_people
+    @books = read_books
+    @rentals = read_rentals
   end
 
   include List
