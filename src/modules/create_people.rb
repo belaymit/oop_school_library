@@ -47,7 +47,6 @@ module CreatePeople
     classroom = gets.chomp
 
     student = Student.new(name, age, classroom, parent_permission: has_permission)
-    puts @people
     @people << student unless @people.include?(student)
     data = { 'type' => student.class.name, 'name' => name, 'age' => age,
              'parent_permission' => has_permission, 'classroom' => classroom,
