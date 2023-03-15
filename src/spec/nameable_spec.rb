@@ -16,7 +16,7 @@ describe Nameable do
   end
   describe '#correct_name' do
     it 'Should return NotImplementedError' do
-      expect{new_nameable.correct_name}.to raise_error(NotImplementedError)
+      expect { new_nameable.correct_name }.to raise_error(NotImplementedError)
     end
   end
 end
