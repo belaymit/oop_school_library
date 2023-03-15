@@ -14,15 +14,22 @@ class App
   attr_reader :books, :people, :rentals
 
   def read_books
-    return [] unless File.exist?('books.json')
-
+    unless File.exist?('books.json')
+      File.new('books.json', 'w')
+      File.write('books.json', [])
+      return []
+    end
     book_items = File.read('books.json')
     book_list = JSON.parse(book_items)
     book_list.each { Book.new('title', 'author') }
   end
 
   def read_people
-    return [] unless File.exist?('people.json')
+    unless File.exist?('people.json')
+      File.new('people.json', 'w')
+      File.write('people.json', [])
+      return []
+    end
 
     people_items = File.read('people.json')
     people_list = JSON.parse(people_items)
@@ -37,7 +44,11 @@ class App
   end
 
   def read_rentals
-    return [] unless File.exist?('rental.json')
+    unless File.exist?('rental.json')
+      File.new('rental.json', 'w')
+      File.write('rental.json', [])
+      return []
+    end
 
     rental_items = File.read('rental.json')
     rental_list = JSON.parse(rental_items)
