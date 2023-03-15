@@ -1,0 +1,116 @@
+[
+  {
+    "type": "Student",
+    "name": "Maxmilon",
+    "age": 25,
+    "parent_permission": false,
+    "classroom": "A1",
+    "id": 11
+  },
+  {
+    "type": "Teacher",
+    "name": "Varys",
+    "specialization": "Engineering",
+    "age": 38,
+    "id": 37
+  },
+  {
+    "type": "Student",
+    "name": "Davos",
+    "age": 21,
+    "parent_permission": false,
+    "classroom": "A1",
+    "id": 31
+  },
+  {
+    "type": "Teacher",
+    "name": "Peter",
+    "specialization": "Physics",
+    "age": 32,
+    "id": 27
+  },
+  {
+    "type": "Student",
+    "name": "Mata",
+    "age": 22,
+    "parent_permission": false,
+    "classroom": "A1",
+    "id": 18
+  },
+  {
+    "type": "Student",
+    "name": "Tina",
+    "age": 19,
+    "parent_permission": false,
+    "classroom": "A1",
+    "id": 12
+  },
+  {
+    "type": "Student",
+    "name": "Daenerys",
+    "age": 26,
+    "parent_permission": false,
+    "classroom": "A1",
+    "id": 36
+  },
+  {
+    "type": "Teacher",
+    "name": "Lannister",
+    "specialization": "Algorithms",
+    "age": 24,
+    "id": 70
+  },
+  {
+    "type": "Teacher",
+    "name": "Missandei",
+    "specialization": "Programming",
+    "age": 21,
+    "id": 64
+  },
+  {
+    "type": null,
+    "name": "Juan",
+    "age": 98,
+    "parent_permission": true,
+    "classroom": "C1",
+    "id": 50
+  },
+  {
+    "type": null,
+    "name": "Someone",
+    "specialization": "maths",
+    "age": 44,
+    "id": 965
+  },
+  {
+    "type": "Teacher",
+    "name": "Others",
+    "specialization": "Maths",
+    "age": 55,
+    "id": 260
+  },
+  {
+    "type": "Student",
+    "name": "belay",
+    "age": 23,
+    "parent_permission": true,
+    "classroom": "C1",
+    "id": 106
+  },
+  {
+    "type": "Student",
+    "name": "shauau",
+    "age": 45,
+    "parent_permission": true,
+    "classroom": "C2",
+    "id": 436
+  },
+  {
+    "type": "Student",
+    "name": "Belay",
+    "age": 28,
+    "parent_permission": true,
+    "classroom": "C1",
+    "id": 230
+  }
+]
