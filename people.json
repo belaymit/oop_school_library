@@ -98,35 +98,19 @@
     "id": 106
   },
   {
-    "type": null,
-    "name": null,
-    "age": null,
-    "parent_permission": null,
-    "classroom": null,
-    "id": null
-  },
-  {
-    "type": null,
-    "name": null,
-    "age": null,
-    "parent_permission": null,
-    "classroom": null,
-    "id": null
-  },
-  {
-    "type": "Student",
-    "name": "jakd'as",
-    "age": 45,
-    "parent_permission": null,
-    "classroom": "C1",
-    "id": null
-  },
-  {
     "type": "Student",
     "name": "shauau",
     "age": 45,
     "parent_permission": true,
     "classroom": "C2",
     "id": 436
+  },
+  {
+    "type": "Student",
+    "name": "Belay",
+    "age": 28,
+    "parent_permission": true,
+    "classroom": "C1",
+    "id": 230
   }
 ]
