@@ -5,7 +5,7 @@ module List
     else
       puts @books.count <= 1 ? "\n#{@books.count} Book\n" : "\n#{@books.count} Books \n"
       @books.each_with_index do |book, index|
-        puts "#{index + 1} Title: '#{book['title']}', Author: #{book['author']}"
+        puts "#{index + 1} Title: #{book['title']}, Author: #{book['author']}"
       end
     end
   end
@@ -22,7 +22,20 @@ module List
   end
 
   def load_rentals
-    puts "\n #{@rentals.count} Rentals\n" unless @rentals.length.positive?
-    rentals.each { |rent| puts("Date: #{rent.date} | #{rent.person.name} rented a #{rent.book.title}") }
+    # puts "\n #{@rentals.count} Rentals\n" unless @rentals.length.positive?
+    # rentals.each { |rent| puts("Date: #{rent.date} | #{rent.person.name} rented a #{rent.book.title}") }
+
+    print "Enter a person's ID: "
+    person_id = gets.chomp.to_i
+    if !@people.find { |person| person['id'] == person_id }
+      puts "No rental found with ID: #{person_id}"
+    elsif @rentals.empty?
+      puts 'The rental list is empty'
+    else
+      puts "\nRentals #{@rentals.count}:\n"
+      @rentals.each do |rental|
+        puts "Date: #{rental['date']}, Book: #{rental['title']} by #{rental['author']}" if rental['id'] == person_id
+      end
+    end
   end
 end
