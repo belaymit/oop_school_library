@@ -22,9 +22,6 @@ module List
   end
 
   def load_rentals
-    # puts "\n #{@rentals.count} Rentals\n" unless @rentals.length.positive?
-    # rentals.each { |rent| puts("Date: #{rent.date} | #{rent.person.name} rented a #{rent.book.title}") }
-
     print "Enter a person's ID: "
     person_id = gets.chomp.to_i
     if !@people.find { |person| person['id'] == person_id }
